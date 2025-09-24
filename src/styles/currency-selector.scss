@@ -1,0 +1,48 @@
+.currency-select {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  &____label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+  }
+  &__wrapper {
+    position: relative;
+  }
+  &__field {
+    width: 100%;
+    padding: 0.75rem 2.5rem 0.75rem 1rem;
+    background: white;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    color: #111827;
+    font-size: 1rem;
+    font-weight: 500;
+    appearance: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    outline: none;
+    &:hover:not(:disabled) {
+      border-color: #9ca3af;
+    }
+  }
+  &:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  }
+  &:disabled {
+    background: #f9fafb;
+    color: #6b7280;
+    cursor: not-allowed;
+  }
+  &__icon {
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #6b7280;
+  }
+}

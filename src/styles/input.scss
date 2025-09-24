@@ -1,0 +1,75 @@
+.amount-input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+
+  &__label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+  }
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  &__field {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: white;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    color: #111827;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    outline: none;
+
+    &::placeholder {
+      color: #9ca3af;
+    }
+
+    &:hover:not(:disabled) {
+      border-color: #9ca3af;
+    }
+
+    &:focus {
+      border-color: #667eea;
+      box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    }
+
+    &:disabled {
+      background: #f9fafb;
+      color: #6b7280;
+      cursor: not-allowed;
+    }
+  }
+
+  &__currency {
+    position: absolute;
+    right: 1rem;
+    color: #6b7280;
+    font-size: 0.875rem;
+    font-weight: 500;
+    pointer-events: none;
+  }
+
+  &__error-message {
+    font-size: 0.75rem;
+    color: #ef4444;
+  }
+
+  &--error {
+    .amount-input__field {
+      border-color: #ef4444;
+
+      &:focus {
+        border-color: #ef4444;
+        box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+      }
+    }
+  }
+}

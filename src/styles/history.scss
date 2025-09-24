@@ -1,0 +1,38 @@
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  background: white;
+  &__main {
+    flex: 1;
+  }
+  &__currencies {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-bottom: 1px solid #f3f4f6;
+    margin-bottom: 0.25rem;
+  }
+  &__arrow {
+    color: #666;
+  }
+  &__rate {
+    color: #666;
+  }
+  &__meta {
+    text-align: right;
+  }
+  &__timestamp {
+    color: #888;
+  }
+}
+
+@media (max-width: 768px) {
+  .history-item {
+    font-size: 0.75rem;
+  }
+}

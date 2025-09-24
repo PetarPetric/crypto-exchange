@@ -1,0 +1,63 @@
+.rates {
+  display: flex;
+  flex-direction: column;
+  &__table {
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+  &__header {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr;
+    background: #f9fafb;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  &__cell {
+    padding: 0.75rem 1rem;
+    font-weight: 500;
+    color: #6b7280;
+    text-transform: uppercase;
+    &--price {
+      text-align: right;
+    }
+  }
+  &__body {
+    background: white;
+  }
+  &__footer {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #9ca3af;
+    text-align: center;
+  }
+}
+
+.rate-row {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr;
+  border-bottom: 1px solid #f3f4f6;
+  transition: background-color 0.15s ease;
+  &:hover {
+    background: #f9fafb;
+  }
+  &:last-child {
+    border-bottom: none;
+  }
+  &__cell {
+    padding: 1rem;
+    font-size: 0.875rem;
+    color: #111827;
+    &--currency {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    &--price {
+      text-align: right;
+    }
+  }
+  &__name {
+    color: #6b7280;
+    font-size: 0.8125rem;
+  }
+}
